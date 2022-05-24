@@ -1,0 +1,27 @@
+
+public class BankaHesabi {
+	int iban;
+	double bakiye;
+	public BankaHesabi(double bakiye) {
+		super();
+		this.bakiye = bakiye;
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "BankaHesabi [iban=" + iban + ", bakiye=" + bakiye + "]";
+	}
+
+
+	public double getBakiye() {
+		return bakiye;
+	}
+
+
+	public void setBakiye(double bakiye) {
+		this.bakiye = bakiye;
+	}	
+	
+	
+}

@@ -1,0 +1,11 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		VadesizHesap hesap1 = new VadesizHesap(300.0);
+		KrediKarti krediKarti = new KrediKarti(500.0, 200.0);
+		
+	
+	}
+
+}

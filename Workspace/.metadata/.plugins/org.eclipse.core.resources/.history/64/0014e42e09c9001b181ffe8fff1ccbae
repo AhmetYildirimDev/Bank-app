@@ -1,0 +1,23 @@
+
+public class VadesizHesap extends BankaHesabi {
+	int hesaptürü;
+	
+	public VadesizHesap(double bakiye) {
+		super(bakiye);
+	}
+
+	@Override
+	public String toString() {
+		return "VadesizHesap [hesaptürü=" + hesaptürü + "]";
+	}
+	
+	private void paraTransferi(BankaHesabi gonderen,BankaHesabi alici) {
+		double gonderilecek = (gonderen.bakiye)*0.2;
+		alici.setBakiye(gonderilecek);
+	};
+	private void krediKartiBorcOdeme() {
+		
+		
+	};
+	
+}

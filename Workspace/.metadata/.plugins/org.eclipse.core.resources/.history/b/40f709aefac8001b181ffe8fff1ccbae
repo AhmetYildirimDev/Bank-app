@@ -1,0 +1,30 @@
+import java.util.ArrayList;
+
+public class Musteri extends Kisi {
+	public Musteri(String ad, String soyad, String email, int telefonNumarasi) {
+		super(ad, soyad, email, telefonNumarasi);
+		
+	}
+
+	int musteriNumarasi;
+	ArrayList<KrediKarti> krediKartlari = new ArrayList<>();
+	ArrayList<BankaHesabi> hesaplar = new ArrayList<>();
+	
+	
+	private void HesapEkle(BankaHesabi hesap) {
+		hesaplar.add(hesap);
+	};
+	private void KrediKartiEkle() {
+			KrediKarti krediKart1 = new KrediKarti();
+	};
+	private void HesapSil() {};
+	private void KrediKartiSil() {};
+
+	
+	
+	@Override
+	public String toString() {
+		return "Musteri [musteriNumarasi=" + musteriNumarasi + "]";
+	}
+	
+}

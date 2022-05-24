@@ -1,0 +1,11 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		YatirimHesabi hesap = new YatirimHesabi(500.0);
+		YatirimHesabi hesap2 = new YatirimHesabi(600.0);
+		hesap.paraEkle(hesap, hesap);
+	
+	}
+
+}

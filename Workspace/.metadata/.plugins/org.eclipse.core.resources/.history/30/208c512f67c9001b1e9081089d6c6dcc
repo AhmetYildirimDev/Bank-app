@@ -1,0 +1,13 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		VadesizHesap hesap1 = new VadesizHesap(300.0);
+		VadesizHesap hesap2 = new VadesizHesap(200.0);
+		
+		hesap1.paraTransferi(hesap1, hesap2);
+		System.out.println(hesap1.getBakiye());
+		System.out.println(hesap2.getBakiye());
+	}
+
+}

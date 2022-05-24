@@ -1,0 +1,12 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		BankaHesabi bankaHesabi = new BankaHesabi(1000.0);
+		KrediKarti krediKarti = new KrediKarti(500.0, 200.0);
+		
+		
+				
+	}
+
+}

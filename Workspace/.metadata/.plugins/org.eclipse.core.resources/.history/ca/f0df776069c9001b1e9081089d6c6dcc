@@ -1,0 +1,13 @@
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//Rastgele sayi üretme sýnýfýndan bir nesne üretelim
+		Random rand = new Random();
+		
+		//rastgele bir ID üretelim
+		int randomID = rand.nextInt(10);
+	}
+
+}

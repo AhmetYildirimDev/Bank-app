@@ -1,0 +1,14 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		VadesizHesap bankaHesabi = new VadesizHesap(1000.0);
+		KrediKarti krediKarti = new KrediKarti(500.0, 200.0);
+		
+			
+		
+		bankaHesabi.krediKartiBorcOdeme(krediKarti, 200);
+		System.out.println(bankaHesabi.getBakiye());
+	}
+
+}

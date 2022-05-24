@@ -1,0 +1,51 @@
+import java.util.ArrayList;
+
+public class Musteri extends Kisi {
+	public Musteri(String ad, String soyad, String email, int telefonNumarasi) {
+		super(ad, soyad, email, telefonNumarasi);
+		
+	}
+	
+	int musteriNumarasi;
+	ArrayList<KrediKarti> krediKartlari = new ArrayList<>();
+	ArrayList<BankaHesabi> hesaplar = new ArrayList<>();
+	
+
+	public void HesapEkle(BankaHesabi hesap) {
+		
+		if(hesap)
+		hesap = new BankaHesabi(1000.0);
+		hesaplar.add(hesap);
+		
+		System.out.println("bakiye"+this.hesaplar.get(0).bakiye);
+	};
+	public void KrediKartiEkle(KrediKarti krediKarti) {
+		krediKarti = new KrediKarti(1500.0,750.0);
+		krediKartlari.add(krediKarti);
+		System.out.println("guncelborc"+this.krediKartlari.get(0).guncelBorc);
+	};
+	
+	public void HesapSil(){
+		if(this.hesaplar.get(0).bakiye > 0) {
+			System.out.println("lütfen öncelikle bakiyenizi baþka bir hesaba aktarýnýz");
+		}else if(this.hesaplar.get(0).bakiye ==  0) {
+			this.hesaplar.remove(0);
+		}
+	}
+	
+	public void KrediKartiSil() {
+		if(this.krediKartlari.get(0).guncelBorc == 0) {
+			this.krediKartlari.remove(0);
+		}else {
+			System.out.println("lütfen öncelikle borç ödemesi yapýnýz");
+		}
+	};
+
+	
+	
+	@Override
+	public String toString() {
+		return "Musteri [musteriNumarasi=" + musteriNumarasi + "]";
+	}
+	
+}

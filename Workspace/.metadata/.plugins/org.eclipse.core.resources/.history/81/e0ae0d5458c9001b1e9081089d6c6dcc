@@ -1,0 +1,25 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		BankaPersoneli bankaPersoneli1 = new BankaPersoneli("Muhammet", "Akgöz", "muhammet.akgz@gmail.com", 12124541);
+		BankaPersoneli bankaPersoneli2 = new BankaPersoneli("Tarık", "Turan", "tarık.turan@gmail.com", 12435541);
+		KrediKarti krediKarti1 = null;
+		BankaHesabi bankaHesabi1= null;
+		Musteri musteri1 = new Musteri("Enes", "Yılmaz", "enes.ymd@gmail.com", 021211212);
+		//musteri1.HesapEkle("Vadesiz");
+		//musteri1.HesapEkle("Yatırım");
+		VadesizHesap vadesizHesap = new VadesizHesap(1000.0);
+		VadesizHesap vadesizHesap2 = new VadesizHesap(300.0);
+		
+		vadesizHesap.paraTransferi(vadesizHesap, vadesizHesap2);
+		System.out.println(vadesizHesap.getBakiye());
+		System.out.println(vadesizHesap2.getBakiye());
+		musteri1.hesapBilgisi();
+		
+		
+			
+				
+	}
+
+}

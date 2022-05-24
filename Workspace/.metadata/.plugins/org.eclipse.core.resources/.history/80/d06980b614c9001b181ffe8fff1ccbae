@@ -1,0 +1,9 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		BankaPersoneli bankaPersoneli1 = new BankaPersoneli("Muhammet", "Akgöz", "muhammet.akgz@gmail.com", 12124541);
+		BankaPersoneli bankaPersoneli2 = new BankaPersoneli("Muhammet", "Akgöz", "muhammet.akgz@gmail.com", 12124541);
+	}
+
+}

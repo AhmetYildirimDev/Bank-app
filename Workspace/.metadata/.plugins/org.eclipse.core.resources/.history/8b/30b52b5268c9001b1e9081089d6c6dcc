@@ -1,0 +1,35 @@
+
+public class YatirimHesabi extends BankaHesabi {
+	String hesaptürü;
+	
+	public YatirimHesabi(double bakiye) {
+		super(bakiye);
+	}
+
+	@Override
+	public String toString() {
+		return "YatirimHesabi [hesaptürü=" + hesaptürü + "]";
+	}
+	
+	public void paraEkle(YatirimHesabi gonderen,YatirimHesabi alici) {
+		//bakiyenin yüzde 20 göndermek istiyoruz
+		double gonderilecek = (gonderen.bakiye)*0.2;
+		alici.setBakiye(gonderilecek);
+	};
+	
+	public void paraCek(KrediKarti krediKart,double miktar) {
+		super.bakiye = super.bakiye - miktar;
+		double guncelBorc = krediKart.getGuncelBorc()-miktar;
+		krediKart.setGuncelBorc(guncelBorc);
+	}
+
+	public String getHesaptürü() {
+		return hesaptürü;
+	}
+
+	public void setHesaptürü(String hesaptürü) {
+		this.hesaptürü = hesaptürü;
+	};
+	
+	
+}

@@ -1,0 +1,114 @@
+import java.util.ArrayList;
+
+import javax.sound.sampled.Control;
+
+public class Musteri extends Kisi {
+	//Sýnýfýmýz özellikleri 
+	int musteriNumarasi;
+	ArrayList<KrediKarti> krediKartlari = new ArrayList<>();
+	ArrayList<BankaHesabi> hesaplar = new ArrayList<>();
+	
+	//Sýnýfýmýzýn yapýcý metodu
+	public Musteri(String ad, String soyad, String email, int telefonNumarasi) {
+		//super gelen deðerleri üst sýnýfa gönderir
+		super(ad, soyad, email, telefonNumarasi);
+		
+	}
+	
+	
+	public void HesapEkle(String hesapturu,double neKadarBakiye,int IBAN) {
+		//hesapturune göre kontrol yaptýktan sonra ilgili nesneyi üretir
+		if(hesapturu == "Vadesiz") {
+			VadesizHesap hesap = new VadesizHesap(neKadarBakiye);
+			hesap.setHesaptürü(hesapturu);
+			hesap.setIban(IBAN);
+			//üretilen nesneyi arraylist ekler
+			hesaplar.add(hesap);
+		}else if(hesapturu == "Yatýrým") {
+			YatirimHesabi hesap = new YatirimHesabi(neKadarBakiye);
+			hesap.setHesaptürü(hesapturu);
+			hesap.setIban(IBAN);
+			//üretilen nesneyi arraylist ekler
+			hesaplar.add(hesap);
+		}
+		//hangi türde hesap oluturulduðu bilgisini konsolda gösterir
+		System.out.println(hesapturu+" "+"hesap"+" "+"oluþturuldu");
+		
+	};
+	
+	public void KrediKartiEkle(double limit,double borc,int kartNumarasi) {
+		//bir kredi kartýnýn borc limitinden fazla olamaz , bunun kontrolunu saðladýk ve ona göre nesnemizi üretiyoruz
+		if(limit >= borc) {
+			KrediKarti krediKarti  = new KrediKarti(limit,borc);
+			krediKarti.setKartNumarasi(kartNumarasi);
+			//üretilen kredikartýný arraylistimize ekliyoruz
+			krediKartlari.add(krediKarti);
+			//kredi kartýnýn oluþturulup , listeye eklendiði hakkýnda konsolda bilgi vermektedir.
+			System.out.println("Kredi karti eklendi");
+		}else {
+			System.out.println("Borc limitden büyük olamaz");
+		}
+	};
+	
+	public void HesapSil(){
+		//tüm hesaplarý döngü ile gezmektedir.
+		for(int i=0;i<this.hesaplar.size();i++) {
+			//hesaplarýn bakyesinin 0 dan büyük olduðu kontrolunu saðlamatadýr
+			if(this.hesaplar.get(i).bakiye > 0.0) {
+				System.out.println("lütfen öncelikle bakiyenizi baþka bir hesaba aktarýnýz");
+			}else if(this.hesaplar.get(i).bakiye == 0) {
+				//eðer 0'a eþit ise hesabý silmektedir.
+				System.out.println(this.hesaplar.get(i).iban+" "+"iban nolu hesabýnýz silinmiþtir");
+				this.hesaplar.remove(i);			
+			}
+		}
+		
+	}
+	
+	public void KrediKartiSil() {
+		//tüm kredikartlarýný döngü ile gezmektedir.
+		for(int i=0;i<this.krediKartlari.size();i++) {
+			//eðer borcu yok ise karti silmetedir.
+			if(this.krediKartlari.get(i).guncelBorc == 0) {
+				this.krediKartlari.remove(i);
+				System.out.println(this.krediKartlari.get(i).kartNumarasi+" "+"kart numaralý kartýnýz silinmiþtir");
+			//eðer borcu varsa ödeme yapmasýný istemektedir.	
+			}else if(this.krediKartlari.get(i).guncelBorc > 0) {
+				System.out.println("lütfen öncelikle borç ödemesi yapýnýz");
+			}
+		}
+	};
+	
+	//@GETTER @SETTER
+	public int getMusteriNumarasi() {
+		return musteriNumarasi;
+	}
+
+	public void setMusteriNumarasi(int musteriNumarasi) {
+		this.musteriNumarasi = musteriNumarasi;
+	}
+
+	@Override
+	public String toString() {
+		return "Musteri [musteriNumarasi=" + musteriNumarasi + "]";
+	}
+	public ArrayList<KrediKarti> getKrediKartlari() {
+		return krediKartlari;
+	}
+
+
+	public void setKrediKartlari(ArrayList<KrediKarti> krediKartlari) {
+		this.krediKartlari = krediKartlari;
+	}
+
+
+	public ArrayList<BankaHesabi> getHesaplar() {
+		return hesaplar;
+	}
+
+
+	public void setHesaplar(ArrayList<BankaHesabi> hesaplar) {
+		this.hesaplar = hesaplar;
+	}
+
+}

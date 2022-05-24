@@ -1,0 +1,11 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		BankaPersoneli bankaPersoneli = new BankaPersoneli("Muhammet", "Akgöz", "muhammet.akgz@gmail.com", 12124541);
+		bankaPersoneli.toString();
+		System.out.println("merhaba");
+
+	}
+
+}

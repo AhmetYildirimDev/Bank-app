@@ -1,0 +1,34 @@
+
+public class VadesizHesap extends BankaHesabi {
+	String hesaptürü;
+	
+	public VadesizHesap(double bakiye) {
+		super(bakiye);
+	}
+
+	@Override
+	public String toString() {
+		return "VadesizHesap [hesaptürü=" + hesaptürü + "]";
+	}
+	
+	public void paraTransferi(BankaHesabi gonderen,BankaHesabi alici) {
+		double gonderilecek = (gonderen.bakiye)*0.2;
+		alici.setBakiye(gonderilecek);
+	};
+	
+	public void krediKartiBorcOdeme(KrediKarti krediKart,double miktar) {
+			super.bakiye = super.bakiye - miktar;
+			double guncelBorc = krediKart.getGuncelBorc()-miktar;
+			krediKart.setGuncelBorc(guncelBorc);
+	}
+
+	public String getHesaptürü() {
+		return hesaptürü;
+	}
+
+	public void setHesaptürü(String hesaptürü) {
+		this.hesaptürü = hesaptürü;
+	};	
+	
+	
+}

@@ -1,0 +1,11 @@
+
+public class BankaPersoneli extends Kisi {
+	int personelID;
+	public BankaPersoneli(String ad, String soyad, String email, int telefonNumarasi) {
+		super(ad, soyad, email, telefonNumarasi);
+		
+	}
+
+	
+	
+}

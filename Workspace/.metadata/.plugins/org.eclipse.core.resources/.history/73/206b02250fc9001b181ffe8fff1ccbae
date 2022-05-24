@@ -1,0 +1,15 @@
+
+public class YatirimHesabi extends BankaHesabi {
+	int hesaptürü;
+	public YatirimHesabi(double limit, double guncelBorc) {
+		super(limit, guncelBorc);
+		
+	}
+	@Override
+	public String toString() {
+		return "YatirimHesabi [hesaptürü=" + hesaptürü + "]";
+	}
+	
+	private void paraEkle() {};
+	private void paraCek() {};
+}

@@ -1,0 +1,69 @@
+import java.util.ArrayList;
+
+import javax.sound.sampled.Control;
+
+public class Musteri extends Kisi {
+	int musteriNumarasi;
+	ArrayList<KrediKarti> krediKartlari = new ArrayList<>();
+	ArrayList<BankaHesabi> hesaplar = new ArrayList<>();
+	
+	public Musteri(String ad, String soyad, String email, int telefonNumarasi) {
+		super(ad, soyad, email, telefonNumarasi);
+		
+	}
+	
+	public void HesapEkle(String hesapturu,double neKadarBakiye) {
+		if(hesapturu == "Vadesiz") {
+			VadesizHesap hesap = new VadesizHesap(neKadarBakiye);
+			hesap.setHesaptürü(hesapturu);
+			hesaplar.add(hesap);
+		}else if(hesapturu == "Yatýrým") {
+			YatirimHesabi hesap = new YatirimHesabi(neKadarBakiye);
+			hesap.setHesaptürü(hesapturu);	
+			hesaplar.add(hesap);
+		}
+		System.out.println(hesapturu+" "+"hesap"+" "+"oluþturuldu");
+		
+	};
+	
+	public void KrediKartiEkle(double limit,double borc) {
+		if(limit >= borc) {
+			KrediKarti krediKarti  = new KrediKarti(limit,borc);
+			krediKartlari.add(krediKarti);
+			System.out.println("Kredi karti eklendi");
+		}else {
+			System.out.println("Borc limitden büyük olamaz");
+		}
+	};
+	
+	public void HesapSil(){
+		System.out.println(this.hesaplar.size());
+		System.out.println(this.hesaplar.get(0).bakiye);
+		for(int i=0;i<=this.hesaplar.size();i++) {
+			if(this.hesaplar.get(i).bakiye > 0.0) {
+				System.out.println("lütfen öncelikle bakiyenizi baþka bir hesaba aktarýnýz");
+			}else if(this.hesaplar.get(i).bakiye == 0) {
+				this.hesaplar.remove(i);
+				System.out.println(this.hesaplar.get(i).iban+" "+"iban nolu hesabýnýz silinmiþtir");
+			}
+		}
+		
+	}
+	
+	public void KrediKartiSil() {
+		for(int i=0;i<=this.krediKartlari.size();i++) {
+			if(this.krediKartlari.get(i).guncelBorc == 0) {
+				this.krediKartlari.remove(i);
+				System.out.println(this.krediKartlari.get(i).kartNumarasi+" "+"kart numaralý kartýnýz silinmiþtir");
+			}else if(this.krediKartlari.get(i).guncelBorc > 0) {
+				System.out.println("lütfen öncelikle borç ödemesi yapýnýz");
+			}
+		}
+	};
+	
+	@Override
+	public String toString() {
+		return "Musteri [musteriNumarasi=" + musteriNumarasi + "]";
+	}
+	
+}

@@ -1,0 +1,25 @@
+
+public class KrediKarti {
+	
+	public class BankaHesabi {
+		int kartNumarasi;
+		double limit;
+		double guncelBorc;
+		double kullanýlabilirLimit;
+		
+		public BankaHesabi(double limit, double guncelBorc) {
+			super();
+			this.limit = limit;
+			this.guncelBorc = guncelBorc;
+		}
+
+		@Override
+		public String toString() {
+			return "BankaHesabi [kartNumarasi=" + kartNumarasi + ", limit=" + limit + ", guncelBorc=" + guncelBorc
+					+ ", kullanýlabilirLimit=" + kullanýlabilirLimit + "]";
+		}
+		
+		
+	}
+
+}

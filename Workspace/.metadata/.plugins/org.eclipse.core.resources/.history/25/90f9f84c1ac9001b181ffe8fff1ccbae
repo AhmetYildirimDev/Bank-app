@@ -1,0 +1,18 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		BankaPersoneli bankaPersoneli1 = new BankaPersoneli("Muhammet", "Akgöz", "muhammet.akgz@gmail.com", 12124541);
+		BankaPersoneli bankaPersoneli2 = new BankaPersoneli("Tarýk", "Turan", "tarýk.turan@gmail.com", 12435541);
+		KrediKarti krediKarti1 = null;
+		BankaHesabi bankaHesabi1= null;
+		Musteri musteri1 = new Musteri("Enes", "Yýlmaz", "enes.ymd@gmail.com", 021211212);
+		musteri1.Kre(bankaHesabi1);
+		
+		
+		
+			
+				
+	}
+
+}

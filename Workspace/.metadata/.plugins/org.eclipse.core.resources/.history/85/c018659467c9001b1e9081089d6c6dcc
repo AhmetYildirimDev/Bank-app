@@ -1,0 +1,13 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		VadesizHesap hesap1 = new VadesizHesap(300.0);
+		KrediKarti krediKarti = new KrediKarti(500.0, 200.0);
+		
+		hesap1.krediKartiBorcOdeme(krediKarti, 60);
+		System.out.println(hesap1.getBakiye());
+		System.out.println(krediKarti.getGuncelBorc());
+	}
+
+}

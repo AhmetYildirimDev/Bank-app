@@ -1,0 +1,14 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		YatirimHesabi hesap = new YatirimHesabi(500.0);
+		YatirimHesabi hesap2 = new YatirimHesabi(600.0);
+		hesap.paraCek(200);
+		
+		System.out.println(hesap.getBakiye());
+		System.out.println(hesap2.getBakiye());
+	
+	}
+
+}

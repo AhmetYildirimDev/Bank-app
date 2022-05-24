@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.StringIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="BankaHesabi"/>
+    <fullyQualifiedTypeName name="VadesizHesap"/>
+    <fullyQualifiedTypeName name="KrediKarti"/>
+    <fullyQualifiedTypeName name="YatirimHesabi"/>
+    <fullyQualifiedTypeName name="java.util.Random"/>
+    <fullyQualifiedTypeName name="Musteri"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,29 @@
+import java.util.ArrayList;
+
+public class BankaPersoneli extends Kisi {
+	int personelID;
+	ArrayList<Musteri> musteriler = new ArrayList();
+	public BankaPersoneli(String ad, String soyad, String email,int telefonNumarasi) {
+		super(ad, soyad, email, telefonNumarasi);
+		
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "BankaPersoneli [personelID=" + personelID + ", musteriler=" + musteriler + "]";
+	}
+
+
+	public int getPersonelID() {
+		return personelID;
+	}
+
+
+	public void setPersonelID(int personelID) {
+		this.personelID = personelID;
+	}
+
+	
+	
+}

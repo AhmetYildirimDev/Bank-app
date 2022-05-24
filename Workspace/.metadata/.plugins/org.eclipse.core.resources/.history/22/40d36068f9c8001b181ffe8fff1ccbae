@@ -1,0 +1,10 @@
+
+public class Musteri extends Kisi {
+	public Musteri(String ad, String soyad, String email, int telefonNumarasi) {
+		super(ad, soyad, email, telefonNumarasi);
+		
+	}
+
+	int musteriNumarasi;
+	
+}

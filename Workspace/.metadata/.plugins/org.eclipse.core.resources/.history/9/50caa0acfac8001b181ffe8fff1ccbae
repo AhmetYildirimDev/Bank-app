@@ -1,0 +1,16 @@
+
+public class KrediKarti {
+	int iban;
+	double bakiye;
+	public KrediKarti(double bakiye) {
+		super();
+		this.bakiye = bakiye;
+	}
+	
+	@Override
+	public String toString() {
+		return "KrediKarti [iban=" + iban + ", bakiye=" + bakiye + "]";
+	}
+	
+	
+}

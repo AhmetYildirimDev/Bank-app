@@ -1,0 +1,10 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		VadesizHesap hesap1 = new VadesizHesap(300.0);
+		
+		
+	}
+
+}

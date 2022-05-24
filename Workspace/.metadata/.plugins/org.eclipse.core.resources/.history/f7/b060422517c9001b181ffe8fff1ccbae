@@ -1,0 +1,14 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		BankaPersoneli bankaPersoneli1 = new BankaPersoneli("Muhammet", "Akgöz", "muhammet.akgz@gmail.com", 12124541);
+		BankaPersoneli bankaPersoneli2 = new BankaPersoneli("Tarýk", "Turan", "tarýk.turan@gmail.com", 12435541);
+		KrediKarti krediKarti1 = new KrediKarti(1000.0, 500.0);
+		BankaHesabi bankaHesabi1 = new BankaHesabi(300.0);
+		
+		bankaHesabi1.
+				
+	}
+
+}

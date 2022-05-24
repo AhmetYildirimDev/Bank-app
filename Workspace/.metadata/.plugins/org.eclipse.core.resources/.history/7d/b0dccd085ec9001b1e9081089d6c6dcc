@@ -1,0 +1,9 @@
+
+public class Main {
+
+	public static void main(String[] args) {
+		Musteri musteri = new Musteri("Muhammet", "Akgöz", "muhammet.akgz@gmail.com", 78478478);
+		musteri.HesapEkle("Vadesiz", 200.0);
+	}
+
+}

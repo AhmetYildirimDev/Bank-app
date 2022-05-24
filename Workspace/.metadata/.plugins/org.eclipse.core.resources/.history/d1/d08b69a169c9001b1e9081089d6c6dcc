@@ -1,0 +1,22 @@
+import java.util.Random;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//Rastgele sayi üretme sýnýfýndan bir nesne üretelim
+		Random rand = new Random();
+		
+		//rastgele bir ID üretelim
+		int randomID = rand.nextInt(10);
+		
+		//rastgele musteri numarasi üretelim
+		int randomMusteriNumarasi = rand.nextInt(10000);
+		
+		//rastgele kart numarasý üretelim
+		int randomKartNumarasi = rand.nextInt(100000);
+		
+		//rastgele iban numarasi üretelim
+		int randomIBAN = rand.nextInt(1000000);
+	}
+
+}

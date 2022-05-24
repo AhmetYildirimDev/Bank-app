@@ -1,0 +1,24 @@
+
+public abstract class Kisi {
+	//Sýnýfmýzýn özellikleri
+	String ad,soyad,email;
+	int telefonNumarasi;
+	
+	//Sýnýfýmýzýn yapýcý methodu
+	public Kisi(String ad, String soyad, String email, int telefonNumarasi) {
+		super();
+		this.ad = ad;
+		this.soyad = soyad;
+		this.email = email;
+		this.telefonNumarasi = telefonNumarasi;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Kisi [ad=" + ad + ", soyad=" + soyad + ", email=" + email + ", telefonNumarasi=" + telefonNumarasi
+				+ "]";
+	}
+	
+	
+}
